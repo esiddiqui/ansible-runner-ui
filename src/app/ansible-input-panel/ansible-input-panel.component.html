@@ -1,0 +1,32 @@
+
+<h3>Command to run:</h3> 
+<div>{{ getAnsibleCommandPreview() }}</div>
+
+<br/>
+
+<label>Path to inventory: </label>
+<input [(ngModel)]="pathToInventory">
+<br/>
+
+<label>Ansible Host Group: </label>
+<input [(ngModel)]="hostGroup">
+<br/>
+
+<label for="ans-host-limit">Limit </label>
+<input [(ngModel)]="hostLimit">
+<br/>
+
+<label for="ans-command">Command: </label>
+<input [(ngModel)]="command">
+<br/>
+
+<button (click)="handleExecute($event)" >Execute</button>
+<br/>
+<button (click)="handleClear($event)" >Clear</button>
+
+<!-- <div>
+json: {{ toJson() }}
+</div> -->
+<div>
+response: {{ httpr }}
+</div>
